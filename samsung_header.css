@@ -1,0 +1,448 @@
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffefe;
+}
+
+/* Container principal del header */
+.samsung-header {
+    background-color: #fffefe;
+    padding: 0 50px;
+}
+
+/* Utilidades superiores */
+.top-utilities {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 8px 0;
+    font-size: 12px;
+}
+
+.top-utilities a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-utilities a:hover {
+    color: #000;
+}
+
+/* Header principal */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Sección izquierda */
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 30px;
+    width: auto;
+}
+
+/* Navegación principal */
+.main-nav {
+    display: flex;
+    gap: 28px;
+}
+
+.main-nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+    letter-spacing: -0.2px;
+}
+
+.main-nav a:hover {
+    color: #000;
+}
+
+/* Sección derecha */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Contenedor del buscador */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.search-container input {
+    padding: 8px 15px 8px 35px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background-color: #fffefe;
+    font-size: 14px;
+    width: 200px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-container input:focus {
+    border-color: #007bff;
+}
+
+.search-container input::placeholder {
+    color: #999;
+}
+
+/* Iconos del header */
+.header-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background-color: #e9e9e9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .samsung-header {
+        padding: 0 20px;
+    }
+    
+    .left-section {
+        gap: 20px;
+    }
+    
+    .main-nav {
+        gap: 20px;
+    }
+    
+    .search-container input {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .top-utilities {
+        font-size: 11px;
+        gap: 15px;
+    }
+    
+    .search-container input {
+        width: 120px;
+    }
+}
+
+/* Sección de imagen principal */
+.hero-image-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image {
+    width: calc(100% - 100px);
+    height: auto;
+    margin-top: 5%;
+    margin-left: 50px;
+    object-fit: cover;
+    max-height: 600px; /* Ajusta según necesites */
+}
+
+/* Placeholder si no tienes imagen aún */
+.image-placeholder {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Segunda sección de imagen */
+.second-image-section {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+.second-image {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-height: 600px; /* Ajusta según necesites */
+}
+
+/* Tercera imagen (unificada) */
+.third-image-section {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.third-image {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    margin-top: 5%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-height: auto; /* Menos altura que las anteriores */
+}
+
+/* Cuarta imagen grande (igual que segunda) */
+.fourth-image-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fourth-image {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-height: 600px;
+}
+
+/* Quinta imagen (unificada - igual que tercera) */
+.fifth-image-section {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.fifth-image {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    margin-top: 5%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-height: auto;
+}
+
+/* Sexta imagen grande (igual que segunda) */
+.sixth-image-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sixth-image {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-height: 600px;
+}
+
+/* Séptima imagen (unificada - igual que tercera) */
+.seventh-image-section {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.seventh-image {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    margin-top: 5%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-height: auto;
+}
+
+/* Sección de texto "Explora las historias" */
+.explore-text-section {
+    width: 100%;
+    margin: 40px 0 20px 0;
+    padding: 0;
+}
+
+.explore-title {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+}
+
+/* Octava imagen (formato séptima imagen) */
+.eighth-image-section {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.eighth-image {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    margin-top: 5%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-height: auto;
+}
+
+/* Footer */
+.samsung-footer {
+    background-color: #fffefe;
+    padding: 40px 50px 30px;
+    margin-top: 60px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Texto informativo superior */
+.footer-info {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-info p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Columnas del footer */
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: #007bff;
+}
+
+/* Link especial "Explora" */
+.explore-link {
+    color: #007bff !important;
+    font-weight: 500;
+}
+
+/* Responsive footer */
+@media (max-width: 1024px) {
+    .footer-columns {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    .samsung-footer {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .footer-column h3 {
+        font-size: 15px;
+    }
+    
+    .footer-column a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
